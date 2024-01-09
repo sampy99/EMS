@@ -28,4 +28,12 @@ public class EmployeeService {
             return  VarList.RSP_SUCCESS;
         }
     }
+
+    public String updateEmployee(EmployeeDTO employeeDTO){
+        if(employeeRepo.existsById(employeeDTO.getEmpID())){
+
+        }else{
+
+        }
+    }
 }
