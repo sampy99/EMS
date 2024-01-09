@@ -7,10 +7,12 @@ import com.example.employeems.util.VarList;
 import jakarta.transaction.Transactional;
 import org.aspectj.weaver.ast.Var;
 import org.modelmapper.ModelMapper;
+import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.Banner;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -43,6 +45,7 @@ public class EmployeeService {
 
     public List<EmployeeDTO> getAllEmployee(){
         List<Employee> employeeList = employeeRepo.findAll();
-        return modelMapper.map(employeeList,)
+        return modelMapper.map(employeeList,new TypeToken<ArrayList<EmployeeDTO>>(){
+        }.getType());
     }
 }
