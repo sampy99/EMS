@@ -57,9 +57,9 @@ public class EmployeeController {
                 responseDTO.setMessage("Success");
                 responseDTO.setContent(employeeDTO);
                 return new ResponseEntity(responseDTO, HttpStatus.ACCEPTED);
-            }else if(res.equals("06")){
+            }else if(res.equals("01")){
                 responseDTO.setCode(VarList.RSP_DUPLICATED);
-                responseDTO.setMessage("Already Registered");
+                responseDTO.setMessage("Not a Registered Employee");
                 responseDTO.setContent(employeeDTO);
                 return new ResponseEntity(responseDTO, HttpStatus.BAD_REQUEST);
             }else{
