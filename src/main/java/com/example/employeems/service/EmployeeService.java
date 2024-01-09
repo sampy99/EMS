@@ -11,6 +11,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.Banner;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 @Transactional
 
@@ -37,5 +39,10 @@ public class EmployeeService {
         }else{
             return VarList.RSP_NO_DATA_FOUND;
         }
+    }
+
+    public List<EmployeeDTO> getAllEmployee(){
+        List<Employee> employeeList = employeeRepo.findAll();
+        return modelMapper.map(employeeList,)
     }
 }
