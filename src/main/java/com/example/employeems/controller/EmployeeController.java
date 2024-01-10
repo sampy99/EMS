@@ -77,4 +77,7 @@ public class EmployeeController {
 
     }
 
+    @GetMapping("/getAllEmployee")
+    public ResponseEntity getAllEmployee
+
 }
