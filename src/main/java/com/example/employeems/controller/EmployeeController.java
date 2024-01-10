@@ -83,6 +83,10 @@ public class EmployeeController {
     public ResponseEntity getAllEmployee(){
         try{
             List<EmployeeDTO> employeeDTOList = employeeService.getAllEmployee();
+            responseDTO.setCode(VarList.RSP_SUCCESS);
+            responseDTO.setMessage("Success");
+            responseDTO.setContent(employeeDTOList);
+            return new ResponseEntity(responseDTO, HttpStatus.ACCEPTED);
         }catch(Exception ex){
             responseDTO.setCode(VarList.RSP_ERROR);
             responseDTO.setMessage(ex.getMessage());
