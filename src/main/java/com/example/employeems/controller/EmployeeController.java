@@ -79,8 +79,8 @@ public class EmployeeController {
 
     }
 
-    @GetMapping("/getAllEmployee")
-    public ResponseEntity getAllEmployee(){
+    @GetMapping("/getEmployee")
+    public ResponseEntity getEmployee(){
         try{
             List<EmployeeDTO> employeeDTOList = employeeService.getAllEmployee();
             responseDTO.setCode(VarList.RSP_SUCCESS);
