@@ -95,4 +95,9 @@ public class EmployeeController {
         }
     }
 
+    @GetMapping("/searchEmployee/{empID}")
+    public ResponseEntity searchEmployee(@PathVariable int empID){
+
+    }
+
 }
