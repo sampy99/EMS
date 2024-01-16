@@ -134,10 +134,10 @@ public class EmployeeController {
                 responseDTO.setContent(null);
                 return new ResponseEntity(responseDTO, HttpStatus.BAD_REQUEST);
             }
-        }catch (Exception e){
+        }catch (Exception ex){
             responseDTO.setCode(VarList.RSP_ERROR);
-            responseDTO.setMessage(e.getMessage());
-            responseDTO.setContent(e);
+            responseDTO.setMessage(ex.getMessage());
+            responseDTO.setContent(ex);
             return new ResponseEntity(responseDTO, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
