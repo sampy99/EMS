@@ -57,4 +57,13 @@ public class EmployeeService {
             return null;
         }
     }
+
+    public String deleteEmployee(int empID){
+        if(employeeRepo.existsById(empID)){
+           employeeRepo.deleteById(empID);
+           return  VarList.RSP_SUCCESS;
+        }else{
+
+        }
+    }
 }
