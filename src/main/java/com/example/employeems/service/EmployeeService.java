@@ -63,7 +63,7 @@ public class EmployeeService {
            employeeRepo.deleteById(empID);
            return  VarList.RSP_SUCCESS;
         }else{
-
+            return  VarList.RSP_NO_DATA_FOUND;
         }
     }
 }
