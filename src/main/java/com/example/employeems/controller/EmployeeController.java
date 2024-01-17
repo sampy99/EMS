@@ -129,7 +129,7 @@ public class EmployeeController {
                 responseDTO.setContent(null);
                 return new ResponseEntity(responseDTO, HttpStatus.ACCEPTED);
             }else{
-                responseDTO.setCode(VarList.RSP_NO_DATA_FOUND);
+                responseDTO.setCode(VarList.RSP_FAIL);
                 responseDTO.setMessage("No employee is available for this empID");
                 responseDTO.setContent(null);
                 return new ResponseEntity(responseDTO, HttpStatus.BAD_REQUEST);
